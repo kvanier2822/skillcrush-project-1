@@ -1,20 +1,6 @@
 class Pet
 
-	def set_name=(name)
-		@name = name
-	end
-
-	def get_name
-		return @name
-	end
-
-	def set_owner=(owner_name)
-		@owner_name = owner_name
-	end
-
-	def get_owner
-		return @owner_name
-	end
+	attr_accessor :name, :owner_name
 
 end
 
@@ -52,22 +38,22 @@ end
 
 
 my_ferret = Ferret.new
-my_ferret.set_name = "Fredo"
-ferret_name = my_ferret.get_name
-
-Ferret.current_count
-puts Ferret.inspect
-puts my_ferret.inspect
+my_ferret.name = "Fredo"
+ferret_name = my_ferret.name
 
 my_dog = Dog.new
-my_dog.set_name = "Ezri"
-dog_name = my_dog.get_name
+my_dog.name = "Ezri"
+dog_name = my_dog.name
 
 my_horse = Horse.new
-my_horse.set_name = "Bella"
-horse_name = my_horse.get_name
+my_horse.name = "Bella"
+horse_name = my_horse.name
 
 puts "#{ferret_name} says #{my_ferret.squeal}!"
 puts "#{dog_name} says #{my_dog.woof}!"
 puts "#{horse_name} says #{my_horse.neigh}!"
+
+Ferret.current_count
+puts Ferret.inspect
+puts my_ferret.inspect
 
